@@ -18,7 +18,7 @@ parser = argparse.ArgumentParser(
 parser.add_argument('image_path')
 parser.add_argument('model_path')
 parser.add_argument('--top_k',action = 'store',dest = 'top_k',type = int,default = 1,help = 'gives top k possibilities of flower')
-parser.add_argument('--category_names',action = 'store',dest = 'json_file',default = 'nopathgiven',help = 'lists all flowers in the dataset')
+parser.add_argument('--category_names',action = 'store',dest = 'json_file',help = 'lists all flowers in the dataset')
 args = parser.parse_args()
 
 im_path = args.image_path
@@ -60,11 +60,11 @@ n = len(probabilities)
 for i in (range(n)):        
      print('{} => {} with probability = {}'.format(i+1,flowers[i],probabilities[i]))
 
-
-if(os.path.isfile(json_file)):
-    with open(json_file, 'r') as f:
-        class_mapping = json.load(f)
-    pprint.pprint(class_mapping)
-else:
-    print('Invalid file address!')
+if(json_file != None):
+    if(os.path.isfile(json_file)):
+        with open(json_file, 'r') as f:
+            class_mapping = json.load(f)
+        pprint.pprint(class_mapping)
+    else:
+        print('Invalid file address!')
     
