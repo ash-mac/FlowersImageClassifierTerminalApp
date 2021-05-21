@@ -10,3 +10,4 @@
   python predict.py ./test_images/orange_dahlia.jpg ./model1.h5 --top_k 5 --category_names label_map.json
  # Caution:
  ## The model is trained with tensorflow 2.0.5 and other details specified in p1_image_classifer.ipynb, so the SAME requirements are needed for PART 2 of the project
+ ## The Terminal Application i.e. p2_image_classifer was run on Jupyter Notebook's Terminal
