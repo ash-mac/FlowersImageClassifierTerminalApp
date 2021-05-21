@@ -11,3 +11,4 @@
  # Caution:
  ## The model is trained with tensorflow 2.0.5 and other details specified in p1_image_classifer.ipynb, so the SAME requirements are needed for PART 2 of the project
  ## The Terminal Application i.e. p2_image_classifer was run on Jupyter Notebook's Terminal
+ ## Don't Forget to change your directory to p2_image_classifier before running the python script
